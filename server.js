@@ -24,7 +24,11 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 });
 
 // Populate empty DB with sample data
-require('./lib/config/dummydata');
+//Comment out if you don't want your data flushed on every launch
+//require('./lib/config/dummydata');
+
+//Clear database at load
+//require('./lib/config/cleardata');
 
 // Passport Configuration
 var passport = require('./lib/config/passport');
